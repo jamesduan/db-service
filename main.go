@@ -1,8 +1,8 @@
 package main
 
 import (
-	"apiservice/g"
-	"apiservice/http"
+	"db-service/g"
+	"db-service/http"
 	"flag"
 	"fmt"
 	"os"

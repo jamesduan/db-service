@@ -9,13 +9,13 @@ import (
 	"strings"
 	"time"
 
-	"apiservice/cache"
-	"apiservice/common/model"
-	"apiservice/common/utils"
-	"apiservice/download"
-	"apiservice/g"
-	"apiservice/redi"
-	"apiservice/sender"
+	"db-service/cache"
+	"db-service/common/model"
+	"db-service/common/utils"
+	"db-service/download"
+	"db-service/g"
+	"db-service/redi"
+	"db-service/sender"
 )
 
 func (t *Agent) MinePlugins(args model.AgentHeartbeatRequest, reply *model.AgentPluginsResponse) error {

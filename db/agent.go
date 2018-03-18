@@ -1,8 +1,8 @@
 package db
 
 import (
-	"apiservice/common/model"
-	"apiservice/g"
+	"db-service/common/model"
+	"db-service/g"
 	"fmt"
 	// "happy-hbs/common/model"
 	// "happy-hbs/modules/hbs/g"

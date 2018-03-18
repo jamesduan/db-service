@@ -1,8 +1,8 @@
 package sender
 
 import (
-	cutils "apiservice/common/utils"
-	"apiservice/g"
+	cutils "db-service/common/utils"
+	"db-service/g"
 
 	rings "github.com/toolkits/consistent/rings"
 )

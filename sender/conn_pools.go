@@ -1,9 +1,9 @@
 package sender
 
 import (
-	"apiservice/g"
+	"db-service/g"
 
-	backend "apiservice/common/backend_pool"
+	backend "db-service/common/backend_pool"
 
 	nset "github.com/toolkits/container/set"
 )

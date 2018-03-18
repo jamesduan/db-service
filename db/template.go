@@ -2,7 +2,7 @@ package db
 
 import (
 	// "happy-hbs/common/model"
-	"apiservice/common/model"
+	"db-service/common/model"
 	"log"
 )
 

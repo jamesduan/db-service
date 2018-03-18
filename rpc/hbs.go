@@ -1,9 +1,9 @@
 package rpc
 
 import (
-	"apiservice/cache"
-	"apiservice/common/model"
-	"apiservice/common/utils"
+	"db-service/cache"
+	"db-service/common/model"
+	"db-service/common/utils"
 	"fmt"
 	// "happy-hbs/common/model"
 	// "happy-hbs/common/utils"

@@ -1,7 +1,7 @@
 package sender
 
 import (
-	"apiservice/proc"
+	"db-service/proc"
 	"time"
 
 	// "happy-hbs/modules/hbs/proc"

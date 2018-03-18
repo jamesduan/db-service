@@ -15,7 +15,7 @@
 package model
 
 import (
-	"apiservice/common/utils"
+	"db-service/common/utils"
 	"fmt"
 )
 

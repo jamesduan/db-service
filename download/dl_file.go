@@ -11,7 +11,7 @@ import (
 	"strings"
 	"sync"
 
-	"apiservice/g"
+	"db-service/g"
 )
 
 //file basic information

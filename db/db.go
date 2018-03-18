@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 
-	"apiservice/g"
+	"db-service/g"
 
 	_ "github.com/go-sql-driver/mysql"
 )

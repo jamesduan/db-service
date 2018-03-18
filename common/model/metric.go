@@ -17,7 +17,7 @@ package model
 import (
 	"fmt"
 
-	MUtils "apiservice/common/utils"
+	MUtils "db-service/common/utils"
 )
 
 type MetricValue struct {

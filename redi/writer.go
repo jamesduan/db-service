@@ -1,8 +1,8 @@
 package redi
 
 import (
-	"apiservice/common/model"
-	"apiservice/g"
+	"db-service/common/model"
+	"db-service/g"
 	"encoding/json"
 	"log"
 	// "happy-hbs/common/model"

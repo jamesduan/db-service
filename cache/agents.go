@@ -6,8 +6,8 @@ package cache
 
 import (
 	// "api_demo/common/model"
-	"apiservice/common/model"
-	"apiservice/db"
+	"db-service/common/model"
+	"db-service/db"
 	"sync"
 	"time"
 	// "happy-hbs/common/model"

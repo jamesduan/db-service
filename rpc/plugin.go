@@ -1,10 +1,10 @@
 package rpc
 
 import (
-	"apiservice/common/model"
-	"apiservice/g"
-	"apiservice/redi"
-	"apiservice/sender"
+	"db-service/common/model"
+	"db-service/g"
+	"db-service/redi"
+	"db-service/sender"
 	"fmt"
 
 	// "happy-hbs/common/model"

@@ -18,7 +18,7 @@ import (
 	"container/list"
 	"sync"
 
-	"happy-hbs/common/model"
+	"db-service/common/model"
 )
 
 type SafeLinkedList struct {

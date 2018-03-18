@@ -3,8 +3,8 @@ package cache
 import (
 	// "happy-hbs/common/model"
 	// "happy-hbs/modules/hbs/db"
-	"apiservice/common/model"
-	"apiservice/db"
+	"db-service/common/model"
+	"db-service/db"
 	"sync"
 )
 

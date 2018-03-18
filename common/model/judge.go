@@ -17,7 +17,7 @@ package model
 import (
 	"fmt"
 
-	"apiservice/common/utils"
+	"db-service/common/utils"
 	// "happy-hbs/common/utils"
 )
 

@@ -1,13 +1,10 @@
 package sender
 
 import (
-	"apiservice/common/model"
-	"apiservice/g"
-	"apiservice/proc"
+	"db-service/common/model"
+	"db-service/g"
+	"db-service/proc"
 	"encoding/json"
-	// "happy-hbs/common/model"
-	// "happy-hbs/modules/hbs/g"
-	// "happy-hbs/modules/hbs/proc"
 	"log"
 	"time"
 

@@ -1,8 +1,7 @@
 package rpc
 
 import (
-	"apiservice/download"
-	"apiservice/g"
+	"db-service/g"
 	"log"
 	"net"
 	"net/rpc"
@@ -15,10 +14,11 @@ import (
 type Hbs int
 type Agent int
 type Plugin int
+type User int
 
 func Start() {
 	// Init Download File Set
-	download.NewFileSet()
+	// download.NewFileSet()
 
 	addr := g.Config().Listen
 
@@ -27,6 +27,7 @@ func Start() {
 	server.Register(new(Agent))
 	server.Register(new(Hbs))
 	server.Register(new(Plugin))
+	server.Register(new(User))
 
 	l, e := net.Listen("tcp", addr)
 	if e != nil {

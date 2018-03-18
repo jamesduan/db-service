@@ -17,7 +17,7 @@ package sender
 import (
 	"time"
 
-	"happy-hbs/common/model"
+	"db-service/common/model"
 )
 
 func MakeMetaData(endpoint, metric, tags string, val interface{}, counterType string, step_and_ts ...int64) *model.JsonMetaData {

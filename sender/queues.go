@@ -1,7 +1,7 @@
 package sender
 
 import (
-	"apiservice/g"
+	"db-service/g"
 
 	nlist "github.com/toolkits/container/list"
 )

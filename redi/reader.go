@@ -1,9 +1,9 @@
 package redi
 
 import (
-	"apiservice/common/model"
-	"apiservice/download"
-	"apiservice/g"
+	"db-service/common/model"
+	"db-service/download"
+	"db-service/g"
 	"encoding/json"
 	"log"
 

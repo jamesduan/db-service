@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"apiservice/cache"
-	"apiservice/common/model"
-	"apiservice/proc"
+	"db-service/cache"
+	"db-service/common/model"
+	"db-service/proc"
 )
 
 func configProcRoutes() {

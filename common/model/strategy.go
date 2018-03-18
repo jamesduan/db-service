@@ -17,7 +17,7 @@ package model
 import (
 	"fmt"
 
-	"apiservice/common/utils"
+	"db-service/common/utils"
 )
 
 type Strategy struct {

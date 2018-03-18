@@ -3,9 +3,9 @@ package cache
 import (
 	// "happy-hbs/common/model"
 	// "happy-hbs/modules/hbs/db"
-	"apiservice/db"
+	"db-service/db"
 	// "happy-hbs/common/model"
-	"apiservice/common/model"
+	"db-service/common/model"
 	// "happy-hbs/common/model"
 	"log"
 	"strconv"

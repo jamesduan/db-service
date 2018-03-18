@@ -2,7 +2,7 @@ package cache
 
 import (
 	// "happy-hbs/modules/hbs/db"
-	"apiservice/db"
+	"db-service/db"
 	"sync"
 )
 

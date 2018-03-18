@@ -22,7 +22,7 @@ import (
 	"log"
 	"net/http"
 
-	"happy-hbs/common/model"
+	"db-service/common/model"
 )
 
 func PostPush(L []*model.JsonMetaData) error {

@@ -1,7 +1,7 @@
 package http
 
 import (
-	"apiservice/g"
+	"db-service/g"
 	"net/http"
 	"strings"
 

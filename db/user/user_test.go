@@ -7,6 +7,7 @@ import (
 )
 
 func TestUser(t *testing.T) {
+	// db.Init()
 	var user *model.User = new(model.User)
 	user.Name = "段凌霄"
 	user.Email = "jamesduanling@hotmail.com"

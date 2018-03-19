@@ -18,7 +18,8 @@ func Create(user *model.User) (bool, error) {
 		user.UpdateTime,
 	)
 	log.Println(sql)
-	_, err := db.DB.Exec(sql)
+	result, err := db.DB.Exec(sql)
+	log.Println(result)
 	if err != nil {
 		log.Println("exec", sql, "fail", err)
 		return false, err

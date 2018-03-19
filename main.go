@@ -1,6 +1,7 @@
 package main
 
 import (
+	"db-service/db"
 	"db-service/g"
 	"db-service/http"
 	"db-service/rpc"
@@ -28,7 +29,7 @@ func main() {
 
 	g.ParseConfig(*cfg)
 
-	// db.Init()
+	db.Init()
 	// cache.Init()
 	// g.InitRedisConnPool()
 	// sender.Start()

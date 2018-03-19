@@ -6,8 +6,8 @@ import (
 	"log"
 )
 
-func (rpcuser *User) CreateUser(req model.User, res *model.User) error {
-	_, err := user.Create(&req)
+func (rpcuser *User) CreateUser(req *model.User, res *model.User) error {
+	_, err := user.Create(req)
 	if err != nil {
 		log.Println(err)
 	}

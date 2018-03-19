@@ -17,6 +17,7 @@ func Create(user *model.User) (bool, error) {
 		user.CreateTime,
 		user.UpdateTime,
 	)
+	log.Println(sql)
 	_, err := db.DB.Exec(sql)
 	if err != nil {
 		log.Println("exec", sql, "fail", err)

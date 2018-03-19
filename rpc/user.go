@@ -7,7 +7,16 @@ import (
 )
 
 func (rpcuser *User) CreateUser(req *model.User, res *model.User) error {
-	_, err := user.Create(req)
+	err := user.Create(req)
+	if err != nil {
+		log.Println(err)
+	}
+	res = nil
+	return nil
+}
+
+func (rpcuser *User) GetUser(userId int, res *model.User) error {
+	err := user.SelectUser(userId)
 	if err != nil {
 		log.Println(err)
 	}

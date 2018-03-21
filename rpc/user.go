@@ -22,3 +22,11 @@ func (rpcuser *User) GetUser(userId int, res *model.User) error {
 	}
 	return nil
 }
+
+func (rpcuser *User) UpdateUser(req *model.User, res *model.User) error {
+	err := user.Update(req)
+	if err != nil {
+		log.Println(err)
+	}
+	return nil
+}

@@ -26,8 +26,8 @@ func Create(user *model.User) error {
 	return nil
 }
 
-func Update(user *model.User) {
-
+func Update(user *model.User) error {
+	return nil
 }
 
 func Delete(userId int) {

@@ -22,6 +22,7 @@ func TestGetUser(t *testing.T) {
 	response := new(model.User)
 	client.Call("User.GetUser", 3, &response)
 }
+
 func TestUser(t *testing.T) {
 
 	timeout := time.Duration(1) * time.Second
@@ -31,7 +32,7 @@ func TestUser(t *testing.T) {
 		os.Exit(1)
 	}
 	// db.Init()
-	var user *model.User = new(model.User)
+	var user = new(model.User)
 	user.Name = "张乐"
 	user.Email = "jamesduanling@hotmail.com"
 	user.PortraitURL = "github.com/jamesduan/123"

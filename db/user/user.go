@@ -34,7 +34,7 @@ func Delete(userId int) {
 
 }
 
-func SelectUser(userId int) error {
+func SelectUserById(userId int, data *model.User) error {
 	sql := fmt.Sprintf("select * from user where id=%d", userId)
 	// log.Println(sql)
 	rows, err := db.DB.Query(sql)
@@ -42,6 +42,7 @@ func SelectUser(userId int) error {
 	// for row := range rows.Next() {
 	// 	log.Println(row)
 	// }
+	// var userList = make([]*model.User, 0)
 	for rows.Next() {
 		var (
 			id          int
@@ -56,7 +57,14 @@ func SelectUser(userId int) error {
 		if err != nil {
 			log.Println(err)
 		}
-		log.Println(id, name, email, sex, portraitURL, createTime, updateTime)
+		data.ID = id
+		data.Name = name
+		data.Email = email
+		data.Sex = sex
+		data.PortraitURL = portraitURL
+		data.CreateTime = createTime
+		data.UpdateTime = updateTime
+		// log.Println(id, name, email, sex, portraitURL, createTime, updateTime)
 	}
 	if err != nil {
 		log.Println("exec", sql, "fail", err)

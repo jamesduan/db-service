@@ -16,7 +16,7 @@ func (rpcuser *User) CreateUser(req *model.User, res *model.User) error {
 }
 
 func (rpcuser *User) GetUser(userId int, res *model.User) error {
-	err := user.SelectUser(userId)
+	err := user.SelectUserById(userId, res)
 	if err != nil {
 		log.Println(err)
 	}

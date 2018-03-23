@@ -1,8 +1,10 @@
 package rpc
 
 import (
+	"database/sql"
 	"db-service/common/model"
 	"fmt"
+	"log"
 	"os"
 	"testing"
 	"time"
@@ -12,6 +14,26 @@ const RPCServer = "127.0.0.1:6030"
 
 // const Port = 6030
 
+func TestUpdateUser(t *testing.T) {
+	timeout := time.Duration(1) * time.Second
+	client, err := JsonRpcClient("tcp", RPCServer, timeout)
+	if err != nil {
+		fmt.Println("dial failed:", err)
+		os.Exit(1)
+	}
+	user := new(model.User)
+	user.ID = 2
+	user.Name = "'xxxx'"
+	user.Sex = "'女'"
+	user.PortraitURL = "'////////xx'"
+	user.CreateTime = "'2018-03-23 01:21:00'"
+	user.UpdateTime = "'2018-03-23 01:21:00'"
+	user.Email = "'jamesduanling@gmail.com'"
+	result := new(sql.Result)
+	client.Call("User.UpdateUser", user, result)
+	// log.Println(response)
+}
+
 func TestGetUser(t *testing.T) {
 	timeout := time.Duration(1) * time.Second
 	client, err := JsonRpcClient("tcp", RPCServer, timeout)
@@ -20,7 +42,9 @@ func TestGetUser(t *testing.T) {
 		os.Exit(1)
 	}
 	response := new(model.User)
-	client.Call("User.GetUser", 3, &response)
+	client.Call("User.GetUser", 5, &response)
+	log.Println(response)
+
 }
 
 func TestUser(t *testing.T) {

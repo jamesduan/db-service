@@ -27,6 +27,23 @@ func Create(user *model.User) error {
 }
 
 func Update(user *model.User) error {
+	sql := fmt.Sprintf(
+		"update user set name=%s, email=%s, sex=%s, portrait_url=%s, create_time=%s, update_time=%s where id=%d",
+		user.Name,
+		user.Email,
+		user.Sex,
+		user.PortraitURL,
+		user.CreateTime,
+		user.UpdateTime,
+		user.ID,
+	)
+	log.Println(sql)
+	result, err := db.DB.Exec(sql)
+	log.Println(result.RowsAffected())
+	if err != nil {
+		log.Println(err)
+		return err
+	}
 	return nil
 }
 

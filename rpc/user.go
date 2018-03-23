@@ -1,6 +1,7 @@
 package rpc
 
 import (
+	"database/sql"
 	"db-service/common/model"
 	"db-service/db/user"
 	"log"
@@ -29,7 +30,8 @@ func (rpcuser *User) GetUser(userID int, res *model.User) error {
 }
 
 //UpdateUser 更新用户 params: req, res
-func (rpcuser *User) UpdateUser(req *model.User, res *model.User) error {
+func (rpcuser *User) UpdateUser(req *model.User, res *sql.Result) error {
+	log.Println(req)
 	err := user.Update(req)
 	if err != nil {
 		log.Println(err)

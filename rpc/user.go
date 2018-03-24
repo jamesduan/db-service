@@ -31,10 +31,20 @@ func (rpcuser *User) GetUser(userID int, res *model.User) error {
 
 //UpdateUser 更新用户 params: req, res
 func (rpcuser *User) UpdateUser(req *model.User, res *sql.Result) error {
-	log.Println(req)
+
 	err := user.Update(req)
 	if err != nil {
 		log.Println(err)
+		return err
+	}
+	return nil
+}
+
+func (rpcuser *User) DeleteUser(id int, res *sql.Result) error {
+	err := user.Delete(id)
+	if err != nil {
+		log.Println(err)
+		return err
 	}
 	return nil
 }

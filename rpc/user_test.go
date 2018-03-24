@@ -17,6 +17,7 @@ const RPCServer = "127.0.0.1:6030"
 func TestUpdateUser(t *testing.T) {
 	timeout := time.Duration(1) * time.Second
 	client, err := JsonRpcClient("tcp", RPCServer, timeout)
+	defer client.Close()
 	if err != nil {
 		fmt.Println("dial failed:", err)
 		os.Exit(1)
@@ -34,9 +35,24 @@ func TestUpdateUser(t *testing.T) {
 	// log.Println(response)
 }
 
+func TestDeleteUser(t *testing.T) {
+	timeout := time.Duration(1) * time.Second
+	client, err := JsonRpcClient("tcp", RPCServer, timeout)
+	defer client.Close()
+	if err != nil {
+		fmt.Println("dial failed:", err)
+		os.Exit(1)
+	}
+	u := new(model.User)
+	client.Call("User.GetUser", 6, &u)
+	result := new(sql.Result)
+	client.Call("User.DeleteUser", u.ID, result)
+}
+
 func TestGetUser(t *testing.T) {
 	timeout := time.Duration(1) * time.Second
 	client, err := JsonRpcClient("tcp", RPCServer, timeout)
+	defer client.Close()
 	if err != nil {
 		fmt.Println("dial failed:", err)
 		os.Exit(1)
@@ -51,6 +67,7 @@ func TestUser(t *testing.T) {
 
 	timeout := time.Duration(1) * time.Second
 	client, err := JsonRpcClient("tcp", RPCServer, timeout)
+	defer client.Close()
 	if err != nil {
 		fmt.Println("dial failed:", err)
 		os.Exit(1)

@@ -47,8 +47,13 @@ func Update(user *model.User) error {
 	return nil
 }
 
-func Delete(userId int) {
-
+func Delete(userId int) error {
+	sql := fmt.Sprintf("delete from user where id=%d", userId)
+	_, err := db.DB.Exec(sql)
+	if err != nil {
+		return err
+	}
+	return nil
 }
 
 func SelectUserById(userId int, data *model.User) error {
